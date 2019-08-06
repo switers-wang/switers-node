@@ -1,0 +1,19 @@
+{
+  "name": "switers-node",
+  "version": "1.0.0",
+  "description": "koa node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/switers-wang/switers-node.git"
+  },
+  "author": "switers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/switers-wang/switers-node/issues"
+  },
+  "homepage": "https://github.com/switers-wang/switers-node#readme"
+}
