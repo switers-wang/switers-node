@@ -5,8 +5,6 @@ const Router = require('koa-router')
 const app = new Koa();
 const router = new Router()
 
-const getRouter = routerConfig.get;
-const postRouter = routerConfig.post;
 // 装载中间件
 for (let key in middlewares) {
     const middleware = middlewares[key];
@@ -14,15 +12,12 @@ for (let key in middlewares) {
 }
 
 // 配置好路由
-for (let key in getRouter) {
-  const actionItem = getRouter[key];
-  router
-    .get(key, actionItem)
-}
-for (let key in postRouter) {
-  const actionItem = postRouter[key];
-  router
-    .post(key, actionItem)
+for (let methodKey in routerConfig) {
+  const methodAllActions = routerConfig[methodKey];
+  for (let key in methodAllActions) {
+    const actionItem = methodAllActions[key];
+    router[methodKey](key, actionItem)
+  }
 }
 
 app

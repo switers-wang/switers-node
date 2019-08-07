@@ -7,5 +7,6 @@ module.exports = {
         '/helloWorld': helloWorld
     },
     post: {
+        '/postError': helloWorld
     }
 }
